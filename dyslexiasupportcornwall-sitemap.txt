@@ -1,0 +1,14 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hidden">
+<url>
+<loc>https://dyslexiasupportcornwall.co.uk/</loc>
+<lastmod>2025-12-31</lastmod>
+<changefreq>daily</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://dyslexiasupportcornwall.co.uk/tag/plugins/</loc>
+<lastmod>2025-12-31</lastmod>
+<changefreq>daily</changefreq>
+<priority>1</priority>
+</url>
+</urlset>
